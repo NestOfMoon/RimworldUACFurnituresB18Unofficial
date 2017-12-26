@@ -31,8 +31,7 @@
             <Flammability>1.0</Flammability>
 			<Beauty>2</Beauty>
 		</statBases>
-	<!-- Nest's Fix for warning for 'CompProperties_Explosive'-->
-    <tickerType>Normal</tickerType>
+	<tickerType>Rare</tickerType>
     <description>A Molecular Fuel Storage Cell, better known as an MFS cell, is a quantum storage device developed by the UAC on its Mars City facility. 
 	
 Cells such as these are often encountered in a wide variety of mobile applications. Especially in expeditions or outposts where proper Argent arrays do not exist.
@@ -127,14 +126,11 @@ WARNING: Explodes when damaged
     <tickerType>Rare</tickerType>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
-	  
-	  <!-- Unsure what it is was supposed to be and how it's supposed to react with 'ignoreNeedsPower', so it's disabled.
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>1000</basePowerConsumption>
       </li>
-	  -->
-      <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Breakdownable"/>
       <li Class="CompProperties_Glower">
 	    <overlightRadius>9.0</overlightRadius>

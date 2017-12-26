@@ -53,13 +53,11 @@ The nano-bots can only heal existing tissues and cells, not ones that are alread
     </building>
     <comps>
 	
-	<!--
 	<li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>750</basePowerConsumption>
         <shortCircuitInRain>true</shortCircuitInRain>
       </li>
-	  -->
 	  
 		<li Class="CompProperties_Explosive">
         <explosiveRadius>3.66</explosiveRadius>
@@ -77,9 +75,7 @@ The nano-bots can only heal existing tissues and cells, not ones that are alread
     <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
     <staticSunShadowHeight>0.15</staticSunShadowHeight>
     <castEdgeShadows>True</castEdgeShadows>
-	<!-- Fix for warning for 'CompProperties_Explosive'-->
-    <tickerType>Normal</tickerType>
-	<!--<tickerType>Rare</tickerType>-->
+	<tickerType>Rare</tickerType>
     <passability>PassThroughOnly</passability>
     <drawGUIOverlay>True</drawGUIOverlay>
     <canOverlapZones>false</canOverlapZones>
