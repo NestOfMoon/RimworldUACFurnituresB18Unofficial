@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+  
+  <!--============================== Beds ==============================-->
+ <ThingDef ParentName="FurnitureBase">
+    <defName>UACNanoPod</defName>
+    <label>Nano pod</label>
+    <Description>An advanced UAC Nano Restoration Pod, this highly-coveted piece of technology rapidly regenerates the occupant. However it cannot be opened from the inside.
+	
+The nano-bots can only heal existing tissues and cells, not ones that are already destroyed, however, the UAC Nano Pod is able to permanently remove scars.</Description>
+    <ThingClass>DOOMUAC.Building_UAC_Pod</ThingClass>
+    <graphicData>
+      <texPath>Building/UACNanopodOpen</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <color>(0.01, 0.01, 0.01)</color>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,4)</drawSize>
+	  <damageData>
+				<rect>(0,0.04,1,1.89)</rect>
+	  </damageData>
+    </graphicData>
+	<drawerType>RealtimeOnly</drawerType>
+    <AltitudeLayer>Building</AltitudeLayer>
+    <statBases>
+      <MaxHitPoints>580</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>400</Mass>
+      <Flammability>1.0</Flammability>
+      <BedRestEffectiveness>7</BedRestEffectiveness>
+      <Comfort>0.75</Comfort>
+      <ImmunityGainSpeedFactor>7</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>7</MedicalTendQualityOffset>
+    </statBases>
+    <Size>(1,2)</Size>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <costList>
+	  <Luciferium>50</Luciferium>
+      <GlitterworldMedicine>10</GlitterworldMedicine>
+      <Component>10</Component>
+    </costList>
+	<building>
+	  <fullGraveGraphicData>
+				<texPath>Building/UACNanopodClosed</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(3,4)</drawSize>
+	  </fullGraveGraphicData>
+	  <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+    <comps>
+	<li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>750</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+		<li Class="CompProperties_Explosive">
+        <explosiveRadius>3.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+	  
+		<li Class="CompProperties_Glower">
+               <glowRadius>3</glowRadius>
+               <glowColor>(0,50,255,0)</glowColor>
+        </li>
+    </comps>
+	<minifiedDef></minifiedDef>	
+    <fillPercent>0.4</fillPercent>
+    <PathCost>60</PathCost>
+    <LeaveResourcesWhenKilled>True</LeaveResourcesWhenKilled>
+    <StaticSunShadowHeight>0.15</StaticSunShadowHeight>
+    <CastEdgeShadows>True</CastEdgeShadows>
+	<tickerType>Rare</tickerType>
+    <Passability>PassThroughOnly</Passability>
+    <DrawGUIOverlay>True</DrawGUIOverlay>
+    <canOverlapZones>false</canOverlapZones>
+	<designationCategory>UAC</designationCategory>
+    <researchPrerequisites><li>UACNanoBed</li></researchPrerequisites>
+  </ThingDef>
+  
+   <!--============================== Beds ==============================--> 
+  
+  <ThingDef ParentName="FurnitureBase">
+    <defName>UACNanoBed</defName>
+    <label>Nano bed</label>
+    <Description>A UAC medical bed that has multiple stations that inject the patient with perishable nano-bots for great healing speed. 
+	
+The nano-bots can only heal existing tissues and cells, not ones that are already destroyed.</Description>
+    <ThingClass>Building_Bed</ThingClass>
+    <graphicData>
+      <texPath>Things/Furniture/UACMedical</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <color>(0.01, 0.01, 0.01)</color>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,4)</drawSize>
+	  <damageData>
+				<rect>(0,0.04,1,1.89)</rect>
+	  </damageData>
+    </graphicData>
+    <AltitudeLayer>Building</AltitudeLayer>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>1.0</Flammability>
+      <BedRestEffectiveness>7</BedRestEffectiveness>
+      <Comfort>0.70</Comfort>
+      <ImmunityGainSpeedFactor>3</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>3</MedicalTendQualityOffset>
+    </statBases>
+    <Size>(1,2)</Size>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>60</costStuffCount>
+    <costList>
+	  <Luciferium>25</Luciferium>
+      <GlitterworldMedicine>5</GlitterworldMedicine>
+      <Component>4</Component>
+    </costList>
+	<building>
+      <Bed_ShowSleeperBody>False</Bed_ShowSleeperBody>
+      <bed_healPerDay>140</bed_healPerDay>
+      <bed_defaultMedical>true</bed_defaultMedical>
+    </building>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>VitalsMonitor</li>
+        </linkableFacilities>
+      </li>
+		<li Class="CompProperties_RoomIdentifier">
+				<roomStat>Impressiveness</roomStat>
+		</li>
+		<li Class="CompProperties_Glower">
+               <glowRadius>3</glowRadius>
+               <glowColor>(224,255,255,0)</glowColor>
+        </li>
+    </comps>
+    <fillPercent>0.4</fillPercent>
+    <PathCost>60</PathCost>
+    <LeaveResourcesWhenKilled>True</LeaveResourcesWhenKilled>
+    <StaticSunShadowHeight>0.15</StaticSunShadowHeight>
+    <CastEdgeShadows>True</CastEdgeShadows>
+    <Passability>PassThroughOnly</Passability>
+    <DrawGUIOverlay>True</DrawGUIOverlay>
+    <canOverlapZones>false</canOverlapZones>
+	<designationCategory>UAC</designationCategory>
+    <researchPrerequisites><li>UACNanoBed</li></researchPrerequisites>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>	
+  </ThingDef>
+  
+      <!--============================== Animal Bed ==============================-->
+  
+	<ThingDef ParentName="FurnitureBase">
+		<defName>UACAnimalBed</defName>
+		<ThingClass>Building_Bed</ThingClass>
+		<label>Animal nano bed</label>
+		<description>A soft bed for animals to sleep on. 
+		
+Fits any animal. Has nano-bot injector with a proper dose for animals.</description>
+		<rotatable>false</rotatable>
+		<fillPercent>0.15</fillPercent>
+		<PathCost>40</PathCost>
+		<CastEdgeShadows>true</CastEdgeShadows>
+		<Passability>PassThroughOnly</Passability>
+    <canOverlapZones>false</canOverlapZones>
+		<graphicData>
+			<texPath>Things/Furniture/UACAnimBed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>45</costStuffCount>
+	<costList>
+	  <Luciferium>5</Luciferium>
+      <GlitterworldMedicine>1</GlitterworldMedicine>
+	  <Component>1</Component>
+    </costList>
+		<building>
+      <bed_humanlike>false</bed_humanlike>
+			<bed_ShowSleeperBody>true</bed_ShowSleeperBody>
+      <bed_healPerDay>3</bed_healPerDay>
+		</building>
+		<AltitudeLayer>Building</AltitudeLayer>
+		<statBases>
+			<MaxHitPoints>140</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <BedRestEffectiveness>7</BedRestEffectiveness>
+      <Comfort>0.90</Comfort>
+      <ImmunityGainSpeedFactor>3</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>3</MedicalTendQualityOffset>
+		</statBases>
+		 <designationCategory>UAC</designationCategory>
+		<comps>
+			<li Class="CompProperties_RoomIdentifier">
+				<roomStat>Impressiveness</roomStat>
+			</li>
+		</comps>
+	</ThingDef>
+	
+
+    <!--============================== Table ==============================-->
+ 
+  
+
+  
+        <!--============================== RockemSockem ==============================-->
+  
+    <ThingDef ParentName="BuildingBase">
+    <defName>UACLamp</defName>
+    <label>MFS lamp</label>
+    <description>The MFS lamp. Uses Molecular Fuel Storage technology, developed by the UAC on its Mars City facility.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Furniture/UACLamp</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costList>
+      <Steel>15</Steel>
+      <Component>3</Component>	  
+	</costList>	
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+	<pathCost>8</pathCost>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+	<minifiedDef>MinifiedFurniture</minifiedDef>	
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <Mass>3</Mass>		
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>160</WorkToBuild>
+      <Flammability>1.0</Flammability>
+	  <Beauty>2</Beauty>
+    </statBases>
+    <researchPrerequisites>
+      <li>MultiAnalyzer</li>
+    </researchPrerequisites>		
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(175,255,245,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Flickable"/>	  
+    </comps>
+    <designationCategory>UAC</designationCategory>
+  </ThingDef>
+
+  
+  
+</Buildings>

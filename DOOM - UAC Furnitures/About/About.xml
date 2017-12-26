@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>DOOM - UAC Furnitures</name>
+	<author>Chicken Plucker</author>
+    <url></url>
+	<targetVersion>0.17.1557</targetVersion> 
+	<description>Furniture list:
+
+- Nano Pod
+Able to heal scars, requires another person to open. Rapid healing
+
+- Nano Bed
+- Animal Nano Bed
+Rapid healing beds that use perishable nanobots
+
+- MFS Cell
+Portable Microfusion Storage Cell that requires plenty of components to build
+
+- MFS Lamp
+A lamp based on the MFS Cell design
+
+- Aerospace Heater
+- Aerospace Cooler
+3x more effective than the normal heater and cooler, but requires more power
+
+- UAC Hydroponics
+Uses nanobot technology to speed up plant growth
+
+Credits:
+Jesus Christ - Died for our sins
+Odstriman - Textures
+Viceroy - C# Coding
+Tynan - Coding
+Shinzy - Coding organization
+Jecrell - Faction Coding, Chicken coding
+Sam - Faction Coding
+	</description>
+</ModMetaData>
