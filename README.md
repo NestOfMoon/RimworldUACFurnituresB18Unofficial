@@ -10,4 +10,5 @@ WARNING: This patch is completely unofficial and provided "as is". If you using 
 
 Chicken Plucker & Co, please don't hurt me, if you want this repository to be gone then just message me here or moonnest96@gmail.com or steamcommunity.com/id/NestOfMoon (the last one isn't accessible if I'm not mistaken).
 
-I'll could get 'The UAC Kit - Outfits only' b18 online in a 24 hours.
+Also try out:
+https://github.com/NestOfMoon/UACOutfitsB18Unofficial
