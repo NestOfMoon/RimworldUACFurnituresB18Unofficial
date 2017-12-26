@@ -2,7 +2,7 @@
 <Defs>
 
   <DesignationCategoryDef>
-    <DefName>UAC</DefName>
+    <defName>UAC</defName>
     <label>UAC</label>
     <description>UAC structures and furniture</description>
     <order>600</order>
